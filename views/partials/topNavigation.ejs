@@ -1,0 +1,48 @@
+<nav class="nav has-shadow" id="top">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item" href="/">
+        <img src="/images/brand.png" style="height: 24px;"alt="Industrial Training Portal">
+      </a>
+    </div>
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="nav-right nav-menu">
+      <a href="/gettingstarted" class="nav-item is-tab <%= (activePage=='main_gettingstarted') ? 'is-active' : '' %>">
+        Getting Started
+      </a>
+      <a href="/organization/all" class="nav-item is-tab <%= (activePage=='organizations_all') ? 'is-active' : '' %>">
+        Organizations
+      </a>
+      <a href="/student/all" class="nav-item is-tab <%= (activePage=='students_all') ? 'is-active' : '' %>">
+        Students
+      </a>
+
+      <% if (userInformation.isAuthenticated) { -%>
+        <span class="nav-item">
+          <a href="/dashboard/v1" class="link">Signed in as <%= userInformation.user.firstName %></a>
+        </span>
+        <span class="nav-item">
+          <a href="/auth/logout" class="button">
+            Logout
+          </a>
+        </span>    
+
+      <%} else { %>
+
+        <span class="nav-item">
+          <a href="/auth/login" class="button <%= (activePage=='auth_login') ? 'is-hidden' : '' %>">
+            Log in
+          </a>
+          <a href="/auth/signup" class="button is-primary <%= (activePage=='auth_signup') ? 'is-hidden' : '' %>">
+            Sign up
+          </a>
+        </span>
+    
+      <%}%>
+    </div>
+  </div>
+</nav>

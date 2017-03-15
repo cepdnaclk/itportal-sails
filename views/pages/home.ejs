@@ -1,0 +1,84 @@
+<% include ../partials/header.ejs %>
+
+  <style>
+  html{
+  overflow-y: auto;
+  }
+  </style>
+
+    <section class="hero is-fullheight">
+      <div class="hero-head">
+		<% include ../partials/topNavigation.ejs %>
+      </div>
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-uppercase has-text-centered">
+                <img src="/images/logo.png" alt="" class="" style="height: 30vh">
+                  <h1 class="title is-3">Welcome to <b>Industrial Training Portal</b></h1>
+                  <h2 class="subtitle is-6 is-kerned"><b>Training period will commence on september 24th, 2017</b></h2>
+                  
+
+      <% if (userInformation.isAuthenticated) { -%>
+        <span class="nav-item">
+          <a href="/dashboard" class="button">
+            Dashboard
+          </a>
+        </span>    
+
+      <%} else { %>
+
+          <a href="/auth/login" class="button <%= (activePage=='auth_login') ? 'is-hidden' : '' %>">
+            Log in
+          </a>
+          <a href="/auth/signup" class="button is-primary <%= (activePage=='auth_signup') ? 'is-hidden' : '' %>">
+            Sign up
+          </a>
+    
+      <%}%>
+                  
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <footer class="hero-footer">
+        <div class="container content" style="padding-bottom: 20px;">
+          <div class="level">
+            <div class="level-left">
+              <a class="level-item" href="http://www.ce.pdn.ac.lk/"><img style="max-height: 46px;" src="/images/brand_footer.png" alt=""></a>
+            </div>
+            <div class="level-right">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading" style="margin-bottom: 0">Undergraduates</p>
+                  <p class="title is-flex is-statistic">
+                  <i class="fa fa-graduation-cap level-item" aria-hidden="true"></i>
+                  <span class="level-item">69</span>
+                  </p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading" style="margin-bottom: 0">Assigned Trainees</p>
+                  <p class="title is-flex is-statistic">
+                  <i class="fa fa-id-badge level-item" style="margin-right: 4px;" aria-hidden="true"></i>
+                  <span class="level-item">38</span>
+                  </p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading" style="margin-bottom: 0">Organizations</p>
+                  <p class="title is-flex is-statistic">
+                  <i class="fa fa-building level-item" style="margin-right: 4px;" aria-hidden="true"></i>
+                  <span class="level-item">33</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+    </section>

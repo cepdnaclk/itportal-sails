@@ -1,0 +1,48 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/topNavigation.ejs %>
+
+    <div class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="image is-128x128">
+            <img src="/images/logo.png" alt="">
+            
+          </div>
+          <h1 class="title"><%= userInformation.user.firstName +' '+ userInformation.user.lastName %></h1>
+          <h2 class="subtitle">Student Dashboard</h2>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="columns">
+        <% include ./sidebar/sidebar_student.ejs %>
+        <div class="column">
+          <section class="section">
+            <div class="container">
+              <div class="box content">
+                <h1 class="title is-4">Creating an account</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia doloribus dolore pariatur, expedita deleniti itaque cupiditate vitae. Magni rerum quasi, sapiente, deserunt facilis cum iste nihil cumque ipsa eum architecto.</p>
+                <p>Lorem  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quia tenetur, hic distinctio totam repellendus officia rerum, quam voluptatem esse magni, fuga nulla omnis beatae non iste, illo provident asperiores!ipsum dolor sit amet, consectetur adipisicing elit. Mollitia doloribus dolore pariatur, expedita deleniti itaque cupiditate vitae. Magni rerum quasi, sapiente, deserunt facilis cum iste nihil cumque ipsa eum architecto.</p>
+                
+              </div>
+              
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <div class="box content">
+                <h1 class="title is-4">Listing your own Space</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia doloribus dolore pariatur, expedita deleniti itaque cupiditate vitae. Magni rerum quasi, sapiente, deserunt facilis cum iste nihil cumque ipsa eum architecto.</p>
+                <p>Lorem  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quia tenetur, hic distinctio totam repellendus officia rerum, quam voluptatem esse magni, fuga nulla omnis beatae non iste, illo provident asperiores!ipsum dolor sit amet, consectetur adipisicing elit. Mollitia doloribus dolore pariatur, expedita deleniti itaque cupiditate vitae. Magni rerum quasi, sapiente, deserunt facilis cum iste nihil cumque ipsa eum architecto.</p>
+                
+              </div>
+              
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>

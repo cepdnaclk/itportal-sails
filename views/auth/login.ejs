@@ -1,0 +1,50 @@
+<style>
+html{
+overflow-y: auto;
+}
+</style>
+<section class="hero is-fullheight is-dark is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-4 is-offset-4">
+                    <div class="image is-64x64">
+                        <a href="/"><img src="/images/logo_inverted.png" alt="Home"></a>
+                    </div>
+                    <h1 class="title">
+                    Login
+                    </h1>
+                    <% if (userInformation.isAuthenticated) { -%>
+                    <p class="subtitle">You are already signed in. Redirecting to dashboard..</p>
+                    <script>
+                        window.location.replace("/dashboard/v1");
+                    </script>
+                    <%} else { %>
+                    <p class="subtitle">You need to be signed in to continue</p>
+                    <%} %>
+                    
+                    <div class="box">
+                        <form action="/auth/login" method="post">
+                            <label class="label">Email</label>
+                            <p class="control">
+                                <input class="input" type="text" name="email" placeholder="ishan@example.com">
+                            </p>
+                            <label class="label">Password</label>
+                            <p class="control">
+                                <input class="input" type="password" name="password" placeholder="●●●●●●●">
+                            </p>
+                            <hr>
+                            <p class="control">
+                                <button type="submit" class="button is-primary">Login</button>
+                            </p>
+                        </form>
+                    </div>
+                    <p class="has-text-centered">
+                        <a href="/auth/signup" class="button is-link">Create a new Account</a>
+                        <a href="/auth/resetpassword" class="button is-link">Forgot password</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

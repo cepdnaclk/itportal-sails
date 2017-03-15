@@ -1,0 +1,34 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/topNavigation.ejs %>
+<div id="app">
+  <div class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="image is-128x128">
+          <img src="/images/logo.png" alt="">
+          
+        </div>
+        <h1 class="title">Students</h1>
+        <h2 class="subtitle">All Students</h2>
+        
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <h1 class="title">All Students</h1>
+      <h2 class="subtitle">{{students.length}} Students in Total</h2>
+    </div>
+    <div class="columns is-multiline">
+      <div class="column is-3" v-for="student in students">
+        <div class="box">
+          <p>{{student.firstName + ' ' + student.lastName}}</p>
+          <p>{{student.email}}</p>
+        </div>
+      </div>
+    </div>
+    <p></p>
+  </div>
+</div>
+<% include ../partials/footer.ejs %>
+<script src="/js_scripts/students/all.js"></script>

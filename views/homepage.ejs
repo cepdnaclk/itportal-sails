@@ -1,0 +1,39 @@
+
+
+<% include ../partials/header.ejs %>
+
+  <style>
+  html{
+  overflow-y: auto;
+  }
+  </style>
+
+    <section class="hero is-fullheight">
+      <div class="hero-head">
+		<% include ../partials/topNavigation.ejs %>
+      </div>
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column has-text-centered">
+                <img src="/img/logo.png" alt="" class="" style="height: 50vh">
+            </div>
+            <div class="column has-text-centered-mobile">
+                  <h1 class="title is-2">Welcome to <b>MyStay.lk</b></h1>
+                  <h2 class="subtitle is-4">Rent your free space <br />earn some extra cash</h2>
+                  <a href="/auth/signup" class="button is-primary is-medium">Sign up now</a>
+                  
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="hero-footer">
+        <div class="container has-text-centered content">
+          <p style="margin-bottom: 10px;">Made by <a href="https://www.facebook.com/ishan.madhusanka">Ishan Madhusanka</a>. <a class="icon" href="https://github.com/imadx/" target="_blank" title="Find me on GitHub">
+          <i class="fa fa-github"></i>
+        </a> 2017.</p>
+        </div>
+      </div>
+    </section>
+<% include ../partials/footer.ejs %>
