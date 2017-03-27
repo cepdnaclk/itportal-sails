@@ -1,1 +1,1 @@
-sass --watch itportal-bulma.sass:css/bulma.css
+sass --watch itportal-bulma.sass:styles/bulma.css

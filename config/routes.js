@@ -61,6 +61,16 @@ module.exports.routes = {
         }
     },
 
+    'get /auth/resetpassword': {
+        view: 'auth/resetpassword',
+        locals: {
+            title: '',
+            description: '',
+            userInformation: {},
+            activePage: '',
+        }
+    },
+
     'get /gettingstarted': {
         view: 'pages/gettingstarted',
         locals: {
