@@ -81,6 +81,16 @@ module.exports.routes = {
         }
     },
 
+    'get /organization/add':{
+        view: 'dashboards/organization',
+        locals: {
+            title: '',
+            description: '',
+            userInformation: {},
+            activePage: '',
+        }
+    },
+
     'post /auth/login': 'AuthController.login',
 
     '/auth/logout': 'AuthController.logout',
