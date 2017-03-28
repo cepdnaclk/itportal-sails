@@ -8,6 +8,8 @@
 module.exports = {
 	
 	all: function(req, res){
+
+		req.templateData.activePage = 'organizations_all';
 		res.view('listings/organizations', req.templateData)
 	}
 };

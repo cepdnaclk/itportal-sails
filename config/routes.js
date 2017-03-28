@@ -77,7 +77,7 @@ module.exports.routes = {
             title: '',
             description: '',
             userInformation: {},
-            activePage: '',
+            activePage: 'main_gettingstarted',
         }
     },
 

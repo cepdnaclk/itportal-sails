@@ -7,6 +7,7 @@
 
 module.exports = {
 	all: function(req, res){
+		req.templateData.activePage = 'students_all';
 		res.view('listings/students', req.templateData)
 	}
 };

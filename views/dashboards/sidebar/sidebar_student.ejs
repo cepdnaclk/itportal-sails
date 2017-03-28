@@ -6,35 +6,35 @@
         Profile
       </p>
       <ul class="menu-list">
-        <li><a>Personal Informtion</a></li>
-        <li><a>Academic Information</a></li>
+        <li><a :class="{'is-active': (activeSection=='personal_information')}" @click="setActiveSection('personal_information')">Personal Information</a></li>
+        <li><a :class="{'is-active': (activeSection=='academic_information')}" @click="setActiveSection('academic_information')">Academic Information</a></li>
       </ul>
       <p class="menu-label">
         Technical Background
       </p>
       <ul class="menu-list">
-        <li><a>My Projects</a></li>
-        <li><a>My Interests</a></li>
+        <li><a :class="{'is-active': (activeSection=='my_projects')}" @click="setActiveSection('my_projects')">My Projects</a></li>
+        <li><a :class="{'is-active': (activeSection=='my_interests')}" @click="setActiveSection('my_interests')">My Interests</a></li>
       </ul>
       <p class="menu-label">
         Awards and Recognitions
       </p>
       <ul class="menu-list">
-        <li><a>Competitions</a></li>
-        <li><a>Awards</a></li>
+        <li><a :class="{'is-active': (activeSection=='competitions')}" @click="setActiveSection('competitions')">Competitions</a></li>
+        <li><a :class="{'is-active': (activeSection=='awards')}" @click="setActiveSection('awards')">Awards</a></li>
       </ul>
       <p class="menu-label">
         Extra Curricular
       </p>
       <ul class="menu-list">
-        <li><a>Clubs and Societies</a></li>
-        <li><a>Sports</a></li>
+        <li><a :class="{'is-active': (activeSection=='clubs_and_societies')}" @click="setActiveSection('clubs_and_societies')">Clubs and Societies</a></li>
+        <li><a :class="{'is-active': (activeSection=='sports')}" @click="setActiveSection('sports')">Sports</a></li>
       </ul>
       <p class="menu-label">
         My Activity
       </p>
       <ul class="menu-list">
-        <li><a>Interviews</a></li>
+        <li><a :class="{'is-active': (activeSection=='interviews')}" @click="setActiveSection('interviews')">Interviews</a></li>
       </ul>
     </aside>
   </div>

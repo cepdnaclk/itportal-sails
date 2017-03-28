@@ -1,0 +1,55 @@
+<transition name="slide-fade">
+  <section class="section" v-show="activeSection=='clubs_and_societies' || activeSection=='sports'">
+    <h1 class="title">Extra Curricular</h1>
+    <transition name="slide-fade">
+      <div class="box content" v-show="activeSection=='clubs_and_societies'">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title is-4 level-item">Clubs and Societies</h1>
+          </div>
+          <div class="level-right">
+            <button class="level-item button">+</button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="level">
+            <div class="level-left">
+              <h1 class="title is-4 level-item">Association of Computer Engineering Students</h1>
+            </div>
+            <div class="level-right">
+              <button class="level-item button">Edit Club Details</button>
+            </div>
+          </div>
+          <p>Club Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum consectetur, aspernatur dolore optio, dolor mollitia temporibus ad repellat perspiciatis obcaecati eaque qui similique nemo voluptas repellendus. Ex, magni. Id.</p>
+          <hr>
+          <p>Role: <i>Backend Developer</i></p>
+        </div>
+      </div>
+    </transition>
+    <transition name="slide-fade">
+      <div class="box content" v-show="activeSection=='sports'">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title is-4 level-item">Sports</h1>
+          </div>
+          <div class="level-right">
+            <button class="level-item button">+</button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="level">
+            <div class="level-left">
+              <h1 class="title is-4 level-item">Sport 1</h1>
+            </div>
+            <div class="level-right">
+              <button class="level-item button">Edit Sport Details</button>
+            </div>
+          </div>
+          <p>Sport Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum consectetur, aspernatur dolore optio, dolor mollitia temporibus ad repellat perspiciatis obcaecati eaque qui similique nemo voluptas repellendus. Ex, magni. Id.</p>
+          <hr>
+          <p>Role: <i>Backend Developer</i></p>
+        </div>
+      </div>
+    </transition>
+  </section>
+</transition>

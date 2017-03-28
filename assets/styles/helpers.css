@@ -16,3 +16,15 @@
 .is-statistic i.level-item{
 	margin-right: 6px !important;
 }
+
+.slide-fade-enter-active {
+  transition: all .1s ease .1s;
+}
+.slide-fade-leave-active {
+  transition: all .1s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}

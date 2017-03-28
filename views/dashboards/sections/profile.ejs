@@ -1,0 +1,25 @@
+<transition name="slide-fade">
+<section class="section" v-show="activeSection=='personal_information' || activeSection=='academic_information'">
+  <h1 class="title">Profile</h1>
+  <transition name="slide-fade">
+    <div class="box content" v-show="activeSection=='personal_information'">
+      <h1 class="title is-4">Personal Information</h1>
+      <label class="label">First Name <input class="input" type="text" placeholder="First Name" v-model="student_profile.firstName"></label>
+      <label class="label">Last Name <input class="input" type="text" placeholder="Last Name" v-model="student_profile.lastName"></label>
+      <label class="label">Email <input class="input" type="email" placeholder="Email" v-model="student_profile.email"></label>
+      <button class="button">Change Password</button>
+      <label class="label">Birthday <input class="input" type="date" placeholder="BirthDay" v-model="student_profile.birthDay"></label>
+    </div>
+  </transition>
+  <transition name="slide-fade">
+    <div class="box" v-show="activeSection=='academic_information'">
+      <h1 class="title is-4">Academic Information</h1>
+      <label class="label">Student Registration Number <input class="input" type="text" placeholder="Student Registration Number"></label>
+      <label class="label">GPA <input class="input" type="text" placeholder="GPA"></label>
+      <label class="label">Courses Followed
+        <input class="input" type="text" placeholder="Courses Followed">
+      </label>
+    </div>
+  </transition>
+</section>
+</transition>

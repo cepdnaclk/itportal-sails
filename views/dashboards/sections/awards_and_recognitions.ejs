@@ -1,0 +1,87 @@
+<transition name="slide-fade">
+<section class="section" v-show="activeSection=='competitions' || activeSection=='awards'">
+  <h1 class="title">Awards and Recognitions</h1>
+  <transition name="slide-fade">
+    <div class="box content" v-show="activeSection=='competitions'">
+      <div class="level">
+        <div class="level-left">
+          <h1 class="title is-4 level-item">Competitions</h1>
+        </div>
+        <div class="level-right">
+          <button class="level-item button">+</button>
+        </div>
+      </div>
+      <div class="box">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title is-4 level-item">Competition Title 2016</h1>
+          </div>
+          <div class="level-right">
+            <button class="level-item button">Edit Details</button>
+          </div>
+        </div>
+        <p>Competition Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum consectetur, aspernatur dolore optio, dolor mollitia temporibus ad repellat perspiciatis obcaecati eaque qui similique nemo voluptas repellendus. Ex, magni. Id.</p>
+        <hr>
+        <p>Role: <i>Backend Developer</i></p>
+        <p>Technology Stack: <i>Skill1, Skill2</i></p>
+      </div>
+      <div class="box">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title is-4 level-item">Another Competition Title 2015</h1>
+          </div>
+          <div class="level-right">
+            <button class="level-item button">Edit Details</button>
+          </div>
+        </div>
+        <p>Competition Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum consectetur, aspernatur dolore optio, dolor mollitia temporibus ad repellat perspiciatis obcaecati eaque qui similique nemo voluptas repellendus. Ex, magni. Id.</p>
+        <hr>
+        <p>Role: <i>Backend Developer</i></p>
+        <p>Technology Stack: <i>Skill1, Skill2</i></p>
+      </div>
+    </div>
+    
+  </transition>
+  <transition name="slide-fade">
+    <div class="box content" v-show="activeSection=='awards'">
+      <div class="level">
+        <div class="level-left">
+          <h1 class="title is-4 level-item">Awards</h1>
+        </div>
+        <div class="level-right">
+          <button class="level-item button">+</button>
+        </div>
+      </div>
+      <div class="box">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title is-4 level-item">Award Title 2016</h1>
+          </div>
+          <div class="level-right">
+            <button class="level-item button">Edit Details</button>
+          </div>
+        </div>
+        <p>Award Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum consectetur, aspernatur dolore optio, dolor mollitia temporibus ad repellat perspiciatis obcaecati eaque qui similique nemo voluptas repellendus. Ex, magni. Id.</p>
+        <hr>
+        <p>Role: <i>Backend Developer</i></p>
+        <p>Technology Stack: <i>Skill1, Skill2</i></p>
+      </div>
+      <div class="box">
+        <div class="level">
+          <div class="level-left">
+            <h1 class="title is-4 level-item">Another Award Title 2015</h1>
+          </div>
+          <div class="level-right">
+            <button class="level-item button">Edit Details</button>
+          </div>
+        </div>
+        <p>Award Description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum consectetur, aspernatur dolore optio, dolor mollitia temporibus ad repellat perspiciatis obcaecati eaque qui similique nemo voluptas repellendus. Ex, magni. Id.</p>
+        <hr>
+        <p>Role: <i>Backend Developer</i></p>
+        <p>Technology Stack: <i>Skill1, Skill2</i></p>
+      </div>
+    </div>
+
+  </transition>
+</section>
+</transition>
