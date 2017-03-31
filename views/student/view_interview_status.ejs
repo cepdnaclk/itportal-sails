@@ -5,39 +5,40 @@
     <div class="container">
       <div class="image is-128x128">
         <img src="/images/logo.png" alt="">
-        
       </div>
       <h1 class="title"><%= userInformation.user.firstName +' '+ userInformation.user.lastName %></h1>
-      <h2 class="subtitle">Student Dashboard</h2>
+      <h2 class="subtitle">Interview Status</h2>
       
     </div>
   </div>
 </div>
 
+
 <section class="container"  style="padding-top: 3rem">  
   <div class="tabs is-medium">
     <ul>
-      <li class="is-active"><a>My Profile</a></li>
-      <li><a href="/student/view_interview_status">My Interviews</a></li>
+      <li><a href="/student/dashboard">My Profile</a></li>
+      <li class="is-active"><a>My Interviews</a></li>
       <li><a href="/student/company_preference">Company Preferences</a></li>
     </ul>
   </div>
 </section>
-<div class="container" id="student_app">
+
+<div class="container" id="app">
   <div class="columns">
-    <% include ./sidebar/sidebar_student.ejs %>
     <div class="column">
-      <% include ./sections/profile.ejs %>
-      <% include ./sections/technical_background.ejs %>
-      <% include ./sections/awards_and_recognitions.ejs %>
-      <% include ./sections/extra_curricular.ejs %>
-      <% include ./sections/my_activity.ejs %>
       
+      <section class="section">
+        <h1 class="title">View Interview Status</h1>
+        <p>{{message}}</p>
+      </section>
+        
     </div>
   </div>
 </div>
+
 <% include ../partials/footer.ejs %>
 <script>
-var userEmail = '<%= userInformation.user.email %>';
+  var userEmail = '<%= userInformation.user.email %>';
 </script>
-<script src="/js_scripts/students/dashboard.js"></script>
+<script src="/js_scripts/usethistemplate.js"></script>

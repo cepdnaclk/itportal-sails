@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/topNavigation.ejs %>
+<div class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="image is-128x128">
+        <img src="/images/logo.png" alt="">
+      </div>
+      <h1 class="title"><%= userInformation.user.firstName +' '+ userInformation.user.lastName %></h1>
+      <h2 class="subtitle">Sample Page</h2>
+      
+    </div>
+  </div>
+</div>
+<div class="container" id="app">
+  <div class="columns">
+    <div class="column">
+      
+      <section class="section">
+        <h1 class="title">Sample Page</h1>
+        <p>{{message}}</p>
+      </section>
+        
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>
+<script>
+  var userEmail = '<%= userInformation.user.email %>';
+</script>
+<script src="/js_scripts/usethistemplate.js"></script>

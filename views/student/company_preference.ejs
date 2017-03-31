@@ -1,0 +1,46 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/topNavigation.ejs %>
+<div class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="image is-128x128">
+        <img src="/images/logo.png" alt="">
+      </div>
+      <h1 class="title"><%= userInformation.user.firstName +' '+ userInformation.user.lastName %></h1>
+      <h2 class="subtitle">Company Preferences</h2>
+      
+    </div>
+  </div>
+</div>
+
+
+<section class="container"  style="padding-top: 3rem">
+  
+  <div class="tabs is-medium">
+    <ul>
+      <li><a href="/student/dashboard">My Profile</a></li>
+      <li><a href="/student/view_interview_status">My Interviews</a></li>
+      <li class="is-active"><a>Company Preferences</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<div class="container" id="app">
+  <div class="columns">
+    <div class="column">
+      
+      <section class="section">
+        <h1 class="title">Set Company Preferences</h1>
+        <p>{{message}}</p>
+      </section>
+        
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>
+<script>
+  var userEmail = '<%= userInformation.user.email %>';
+</script>
+<script src="/js_scripts/usethistemplate.js"></script>
